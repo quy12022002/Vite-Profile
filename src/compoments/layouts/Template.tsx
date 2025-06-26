@@ -4,6 +4,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 import About from "./About";
+import Experience from "./Experience";
 
 const Template: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Template: React.FC = () => {
       <Header />
       <Content />
       <About />
+      <Experience />
       <Footer />
     </div>
   );
