@@ -24,18 +24,15 @@ const Experience = () => {
                   <i className="fas fa-briefcase"></i>
                 </div>
                 <div>
-                  <h3 id="exp1-title">Intern Fullstack web Developer</h3>
-                  <p className="company">MEVIVU TECHNOLOGY</p>
+                  <h3 id="exp1-title">Freelance</h3>
+                  <p className="company"></p>
                 </div>
               </div>
-              <p className="date">09/2024 - 11/2024</p>
+              <p className="date">03/2025 - Now</p>
               <p className="description">
-                Using Visual Studio Code to develop web applications using
-                Laravel Framework and jQuery, build RESTful APIs to integrate
-                for mobile applications, use WordPress to build websites on
-                demand, and use Paint to create logos and banners for customers.
-                Implement APIs that work well for mobile applications, and build
-                websites on the WordPress platform to meet requirements.
+                Utilized client-specified frameworks and programming languages
+                to create a basic website with CRUD functionality based on Figma
+                design prototypes
               </p>
             </article>
           </Col>
