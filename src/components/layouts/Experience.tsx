@@ -5,7 +5,7 @@ const Experience = () => {
     <div className="experience-container">
       <Container>
         <h2 className="experience-title text-center">Work Experience</h2>
-        <p className="text-center">
+        <p className="text-center pb-4">
           My professional journey through various roles and companies,
           showcasing my growth and expertise in software development.
         </p>

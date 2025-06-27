@@ -42,9 +42,7 @@ const Footer = () => {
             </Nav.Link>
           </div>
         </Nav>
-        <p className="mb-0 text-white text-center text-md-start">
-          © 2025 copyright all right reserved by DoXuanQuy
-        </p>
+        <p className="mb-0">© 2025 copyright all right reserved by DoXuanQuy</p>
       </Container>
     </footer>
   );

@@ -15,7 +15,7 @@ const Skills = () => {
           in software development and design.
         </p>
         <Row className="skill-content g-4 justify-content-center">
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-backend me-3">
@@ -33,7 +33,7 @@ const Skills = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-frontend me-3">
@@ -53,7 +53,7 @@ const Skills = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-uiux me-3">
@@ -67,7 +67,7 @@ const Skills = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-database me-3">
@@ -81,7 +81,7 @@ const Skills = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-ai me-3">
@@ -97,7 +97,7 @@ const Skills = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-softskills me-3">

@@ -7,6 +7,8 @@ import About from "./About";
 import Experience from "./Experience";
 import Skills from "./Skills";
 import Education from "./Education";
+import Contact from "./Contact";
+import Projects from "./Projects";
 
 const Template: React.FC = () => {
   return (
@@ -18,6 +20,8 @@ const Template: React.FC = () => {
       <Experience />
       <Skills />
       <Education />
+      <Projects />
+      <Contact />
       <Footer />
     </div>
   );
