@@ -92,7 +92,7 @@ const About = () => {
                         Location
                       </p>
                       <p id="location-value" className="value fw-semibold mb-0">
-                        District 12, HCM
+                        Tan Dong Hiep, Di An, HCM
                       </p>
                     </div>
                   </div>

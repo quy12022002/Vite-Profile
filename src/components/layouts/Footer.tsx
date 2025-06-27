@@ -1,9 +1,8 @@
-import type React from "react";
 import { Container, Nav } from "react-bootstrap";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="py-3">
       <Container className="footer-container">

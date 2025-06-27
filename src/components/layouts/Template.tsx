@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import About from "./About";
 import Experience from "./Experience";
+import Skills from "./Skills";
+import Education from "./Education";
 
 const Template: React.FC = () => {
   return (
@@ -14,6 +16,8 @@ const Template: React.FC = () => {
       <Content />
       <About />
       <Experience />
+      <Skills />
+      <Education />
       <Footer />
     </div>
   );
