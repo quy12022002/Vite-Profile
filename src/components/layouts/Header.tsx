@@ -22,7 +22,11 @@ const Header: React.FC = () => {
     >
       <Container>
         <Navbar.Brand href="#">
-          <img src="src/assets/logo.png" alt="Logo" className="navbar-logo" />
+          <img
+            src="src/assets/logo-v2.png"
+            alt="Logo"
+            className="navbar-logo"
+          />
           DEV DOXUANQUY
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
