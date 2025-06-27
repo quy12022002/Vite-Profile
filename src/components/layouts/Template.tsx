@@ -9,6 +9,7 @@ import Skills from "./Skills";
 import Education from "./Education";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import Activities from "./Activities";
 
 const Template: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const Template: React.FC = () => {
       <Skills />
       <Education />
       <Projects />
+      <Activities />
       <Contact />
       <Footer />
     </div>

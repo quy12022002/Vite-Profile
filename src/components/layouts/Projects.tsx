@@ -68,12 +68,7 @@ const Projects = () => {
                       <span>Code</span>
                     </a>
                   </div>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-decoration-none"
-                  >
+                  <a href="#" className="text-decoration-none">
                     <GoLinkExternal />
                     <span>Demo</span>
                   </a>
