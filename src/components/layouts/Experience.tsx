@@ -52,17 +52,16 @@ const Experience = () => {
                   <i className="fas fa-briefcase"></i>
                 </div>
                 <div>
-                  <h3 id="exp2-title">Intern fullstack web Developer</h3>
-                  <p className="company">GIA THANH REFRIGERATION JSC</p>
+                  <h3 id="exp2-title">Intern web development</h3>
+                  <p className="company">Thu Duc College of Technology</p>
                 </div>
               </div>
-              <p className="date">05/2024 - 07/2024</p>
+              <p className="date">05/2023 - 03/2025</p>
               <p className="description">
-                Use Visual Studio Code to develop and maintain web applications
-                using React and Laravel, and develop and maintain a RESTful API
-                to integrate data between the frontend and backend. Improve
-                UI/UX performance, build and deploy RESTful APIs, and enhance
-                system integration capabilities.
+                Assist in improving and developing website features through
+                testing to enhance user experience. Additionally, I create and
+                post articles, images, and videos related to events and
+                activities on the school website.
               </p>
             </article>
           </Col>
