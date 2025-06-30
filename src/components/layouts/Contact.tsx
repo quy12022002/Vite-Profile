@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { FiSend } from "react-icons/fi";
+import imgEmail from "../../assets/email.jpg";
 
 const Contact: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -109,7 +110,7 @@ const Contact: React.FC = () => {
             <div className="contact-info">
               <div>
                 <img
-                  src="src/assets/email.jpg"
+                  src={imgEmail}
                   alt="Contact Email"
                   className="rounded-lg rounded img-fluid"
                   height="320"

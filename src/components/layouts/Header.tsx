@@ -1,6 +1,7 @@
 import type React from "react";
 import { useEffect, useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import imgLogo from "../../assets/logo.png";
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -49,11 +50,7 @@ const Header: React.FC = () => {
     >
       <Container>
         <Navbar.Brand href="#">
-          <img
-            src="src/assets/logo-v2.png"
-            alt="Logo"
-            className="navbar-logo"
-          />
+          <img src={imgLogo} alt="Logo" className="navbar-logo" />
           DEV DOXUANQUY
         </Navbar.Brand>
         <Navbar.Toggle

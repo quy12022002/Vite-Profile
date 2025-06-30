@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import imgTDC from "../../assets/tdc.jpg";
 
 const Education = () => {
   return (
@@ -38,7 +39,7 @@ const Education = () => {
           >
             <div>
               <img
-                src="src/assets/tdc.jpg"
+                src={imgTDC}
                 alt="Logo"
                 loading="lazy"
                 className="h-auto w-100 shadow-lg rounded"
