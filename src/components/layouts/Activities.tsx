@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { ImFilm } from "react-icons/im";
 import { LuMedal, LuMusic } from "react-icons/lu";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { RiBookLine } from "react-icons/ri";
@@ -25,6 +26,22 @@ const Activities = () => {
                 <p>
                   I enjoy reading books on history, poetry, cultural life and
                   personal development.
+                </p>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} sm={6} md={4} lg={4} xl={4} className="pb-3">
+            <div className="card p-4 h-100">
+              <div className="d-flex align-items-center mb-3">
+                <div className="icon-circle icon-music me-3">
+                  <ImFilm />
+                </div>
+                <h5 className="fw-semibold mb-0 text-white">Film Watching</h5>
+              </div>
+              <div>
+                <p>
+                  I love the feeling of watching movies with the person I love
+                  every night.
                 </p>
               </div>
             </div>
