@@ -35,7 +35,7 @@ const TypingEffect: React.FC = () => {
   }, [charIndex, deleting, wordIndex]);
 
   return (
-    <span>
+    <span translate="no">
       <span>{displayedText}|</span>
     </span>
   );

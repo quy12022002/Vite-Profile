@@ -25,39 +25,37 @@ const Projects = () => {
               <Card.Body>
                 <Card.Title>My Dev Profile</Card.Title>
                 <Card.Text>
-                  <p>
-                    This template provides a clean and professional foundation
-                    for showcasing your skills, projects, and experience. Built
-                    with flexibility in mind, it allows for easy customization
-                    to reflect your unique personal brand and style. Whether
-                    you're a developer looking to display your coding prowess or
-                    a designer eager to exhibit your creative work, this
-                    template offers a straightforward and effective way to build
-                    your online presence.
-                  </p>
-                  <div className="tags">
-                    <span className="tag">
-                      <FaTag />
-                      Vite
-                    </span>
-                    <span className="tag">
-                      <FaTag />
-                      React
-                    </span>
-                    <span className="tag">
-                      <FaTag />
-                      TypeScript
-                    </span>
-                    <span className="tag">
-                      <FaTag />
-                      Bootstrap
-                    </span>
-                    <span className="tag">
-                      <FaTag />
-                      SASS
-                    </span>
-                  </div>
+                  This template provides a clean and professional foundation for
+                  showcasing your skills, projects, and experience. Built with
+                  flexibility in mind, it allows for easy customization to
+                  reflect your unique personal brand and style. Whether you're a
+                  developer looking to display your coding prowess or a designer
+                  eager to exhibit your creative work, this template offers a
+                  straightforward and effective way to build your online
+                  presence.
                 </Card.Text>
+                <div className="tags pt-4">
+                  <span className="tag">
+                    <FaTag />
+                    Vite
+                  </span>
+                  <span className="tag">
+                    <FaTag />
+                    React
+                  </span>
+                  <span className="tag">
+                    <FaTag />
+                    TypeScript
+                  </span>
+                  <span className="tag">
+                    <FaTag />
+                    Bootstrap
+                  </span>
+                  <span className="tag">
+                    <FaTag />
+                    SASS
+                  </span>
+                </div>
                 <div className="card-footer">
                   <div className="d-flex align-items-center gap-2">
                     <a
