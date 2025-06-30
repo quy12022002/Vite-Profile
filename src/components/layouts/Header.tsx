@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
 const Header: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [expanded, setExpanded] = useState<boolean>(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -12,6 +14,30 @@ const Header: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
+
+  const handleLinkClick = (sectionId: string) => {
+    setExpanded(false);
+    scrollToSection(sectionId);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navbar = document.querySelector(".navbar") as HTMLElement;
+      const navbarHeight = navbar.offsetHeight;
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+      window.scrollTo({
+        top: sectionTop - navbarHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Navbar
       bg="dark"
@@ -19,6 +45,7 @@ const Header: React.FC = () => {
       expand="lg"
       sticky="top"
       className={`scrolled-navbar ${scrolled ? "scrolled" : ""}`}
+      expanded={expanded}
     >
       <Container>
         <Navbar.Brand href="#">
@@ -29,19 +56,54 @@ const Header: React.FC = () => {
           />
           DEV DOXUANQUY
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={handleToggle}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#">About</Nav.Link>
-            <Nav.Link href="#">Experience</Nav.Link>
-            <Nav.Link href="#">Skills</Nav.Link>
-            <Nav.Link href="#">Education</Nav.Link>
-            <Nav.Link href="#">Projects</Nav.Link>
-            <Nav.Link href="#">Activity</Nav.Link>
+            <Nav.Link href="#about" onClick={() => handleLinkClick("about")}>
+              About
+            </Nav.Link>
+            <Nav.Link
+              href="#experience"
+              onClick={() => handleLinkClick("experience")}
+            >
+              Experience
+            </Nav.Link>
+            <Nav.Link href="#skill" onClick={() => handleLinkClick("skill")}>
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              href="#education"
+              onClick={() => handleLinkClick("education")}
+            >
+              Education
+            </Nav.Link>
+            <Nav.Link
+              href="#project"
+              onClick={() => handleLinkClick("project")}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#activity"
+              onClick={() => handleLinkClick("activity")}
+            >
+              Activity
+            </Nav.Link>
           </Nav>
+          <Nav.Link
+            href="#contact"
+            onClick={() => handleLinkClick("contact")}
+            className="d-block d-md-none"
+          >
+            Contact
+          </Nav.Link>
           <Button
             className="btn-contact ms-auto mt-3 mt-md-0 d-none d-md-block"
             type="button"
+            onClick={() => handleLinkClick("contact")}
           >
             Contact Me!
           </Button>

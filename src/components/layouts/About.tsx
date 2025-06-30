@@ -2,16 +2,16 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <Container>
         <Row className="g-4 about-content">
-          <Col xs={12} sm={10} md={6} lg={6} xl={5} className="about-left">
+          <Col xs={12} sm={12} md={6} lg={5} className="about-left">
+            <h2 id="about-me-title" className="mb-4">
+              About Me
+            </h2>
             <p>
-              <h2 id="about-me-title" className="mb-4">
-                About Me
-              </h2>
               I am a full-stack web Developer with experience in React (Next.js
-              Framework), SQL, Bootstrap and SASS. I have participated in
+              Framework), SQL, Bootstrap, and SASS. I have participated in
               building simple backend systems, creating APIs, and developing
               frontend interfaces.
             </p>
@@ -25,8 +25,8 @@ const About = () => {
               can maximize my abilities and experience.
             </p>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={6} xl={5} className="about-right">
-            <div className="info-card p-6 rounded-lg">
+          <Col xs={12} sm={12} md={6} lg={5} className="about-right">
+            <div className="info-card p-4 rounded-lg">
               <Row className="g-4">
                 <Col xs={12} sm={6}>
                   <div
@@ -70,7 +70,7 @@ const About = () => {
                         id="experience-value"
                         className="value fw-semibold mb-0"
                       >
-                        1 Years
+                        1 Year
                       </p>
                     </div>
                   </div>

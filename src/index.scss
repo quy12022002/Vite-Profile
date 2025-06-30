@@ -37,31 +37,31 @@ body {
       color: #d3d3d3;
       text-transform: uppercase;
 
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #e75a0c;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
-
-      &:hover::after {
-        transform: translateX(0);
-      }
-
       // Điều chỉnh cho app
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         margin: 10px 0;
         width: auto;
       }
 
       // Điều chỉnh cho web
-      @media (min-width: 768px) {
+      @media (min-width: 767.98px) {
         margin: 0 20px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #e75a0c;
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+          transform: translateX(0);
+        }
       }
     }
 
@@ -91,6 +91,7 @@ body {
   /*Content*/
   .content-container {
     color: #d3d3d3;
+
     .intro-text {
       font-weight: 700;
       font-size: 0.875rem;
@@ -141,6 +142,8 @@ body {
   /*About Me*/
   .about-container {
     color: #d3d3d3;
+    padding-top: 4rem;
+    margin-top: -4rem;
 
     .about-content {
       border-radius: 0.5rem;
@@ -149,7 +152,7 @@ body {
       background-color: #0d0f1e;
       opacity: 0.9;
 
-      h2#about-me-title {
+      h2 {
         font-weight: 800;
         font-size: 2rem;
         border-bottom: 2px solid;
@@ -169,7 +172,7 @@ body {
           border-radius: 0.5rem;
           padding: 1.5rem;
 
-          @media (min-width: 768px) {
+          @media (min-width: 769px) {
             width: calc(100% + 5rem);
             margin-left: 6.5rem;
           }
@@ -181,14 +184,12 @@ body {
             margin-bottom: 1.5rem;
 
             .icon-circle {
-              width: 48px;
-              height: 48px;
+              width: 40px;
+              height: 40px;
               border-radius: 50%;
               display: flex;
               justify-content: center;
               align-items: center;
-              font-size: 1.25rem;
-              flex-shrink: 0;
             }
             .icon-blue {
               background-color: #1e2e5a;
@@ -210,7 +211,6 @@ body {
             .value {
               font-weight: 700;
               margin: 0;
-              white-space: nowrap;
             }
 
             p {
@@ -236,7 +236,10 @@ body {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    padding-top: 5rem;
+    margin-top: -5rem;
     padding-bottom: 2rem;
+
     .experience-title {
       font-weight: 800;
       font-size: 2rem;
@@ -399,6 +402,8 @@ body {
   /*Skills*/
   .skill-container {
     color: #d3d3d3;
+    padding-top: 5rem;
+    margin-top: -5rem;
 
     .skill-title {
       font-weight: 800;
@@ -485,7 +490,8 @@ body {
   /*Education*/
   .education-container {
     color: #d3d3d3;
-    padding: 2rem 0;
+    padding: 5rem 0 2rem;
+    margin-top: -5rem;
     .education-title {
       font-weight: 800;
       font-size: 2rem;
@@ -527,8 +533,8 @@ body {
   /*Project*/
   .project-container {
     color: #d3d3d3;
-    padding: 2rem 0;
-
+    padding: 5rem 0 2rem;
+    margin-top: -5rem;
     .project-title {
       font-weight: 800;
       font-size: 2rem;
@@ -619,10 +625,11 @@ body {
   }
 
   /*Activities*/
-  .activitie-container {
+  .activity-container {
     color: #d3d3d3;
-    padding: 2rem 0;
-    .activitie-title {
+    padding: 5rem 0 2rem;
+    margin-top: -5rem;
+    .activity-title {
       font-weight: 800;
       font-size: 2rem;
       border-bottom: 2px solid;
@@ -691,7 +698,8 @@ body {
   /*Contact*/
   .contact-container {
     color: #d3d3d3;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1rem;
+    margin-top: -1.5rem;
     .contact-title {
       text-transform: uppercase;
     }
@@ -809,8 +817,8 @@ body {
     }
 
     @media (max-width: 768px) {
-      padding: 1rem; // Padding cho màn hình nhỏ
-
+      padding-top: 20rem;
+      margin-top: -20rem;
       .form-container {
         padding: 1.5rem;
         margin-bottom: 2rem;

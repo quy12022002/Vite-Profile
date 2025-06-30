@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { FiSend } from "react-icons/fi";
 
 const Contact: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <Container>
         <h2 className="contact-title text-center">Let's connect</h2>
         <p className="text-center">
@@ -30,7 +31,7 @@ const Contact: React.FC = () => {
           methods.
         </p>
         <Row className="justify-content-between">
-          <Col xs={12} sm={10} md={6} lg={4} xl={5}>
+          <Col xs={12} sm={12} md={6} lg={4} xl={5}>
             <div className="form-container">
               <Form
                 noValidate
@@ -99,7 +100,7 @@ const Contact: React.FC = () => {
                   </Col>
                 </Row>
                 <Button className="send-message" type="submit">
-                  SEND MESSAGE
+                  SEND MESSAGE <FiSend />
                 </Button>
               </Form>
             </div>

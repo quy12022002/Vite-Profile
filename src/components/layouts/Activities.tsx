@@ -1,12 +1,13 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { LuMedal, LuMusic } from "react-icons/lu";
+import { MdOutlineCameraAlt } from "react-icons/md";
 import { RiBookLine } from "react-icons/ri";
 
 const Activities = () => {
   return (
-    <div className="activitie-container">
+    <div className="activity-container" id="activity">
       <Container>
-        <h2 className="activitie-title text-center">Personal Activities</h2>
+        <h2 className="activity-title text-center">Personal Activities</h2>
         <p className="text-center pb-4">
           Beyond coding, these are the activities and interests that keep me
           inspired and balanced.
@@ -22,8 +23,8 @@ const Activities = () => {
               </div>
               <div>
                 <p>
-                  I enjoy science fiction, psychology, horror and personal
-                  development books.
+                  I enjoy reading books on history, poetry, cultural life and
+                  personal development.
                 </p>
               </div>
             </div>
@@ -37,10 +38,7 @@ const Activities = () => {
                 <h5 className="fw-semibold mb-0 text-white">Music</h5>
               </div>
               <div>
-                <p>
-                  I listen to music in my spare time and enjoy attending live
-                  concerts and music festivals.
-                </p>
+                <p>I listen to music when I'm stressed and on rainy days.</p>
               </div>
             </div>
           </Col>
@@ -48,14 +46,15 @@ const Activities = () => {
             <div className="card p-4 h-100">
               <div className="d-flex align-items-center mb-3">
                 <div className="icon-circle icon-photography me-3">
-                  <RiBookLine />
+                  <MdOutlineCameraAlt />
                 </div>
-                <h5 className="fw-semibold mb-0 text-white">Photography</h5>
+                <h5 className="fw-semibold mb-0 text-white">Visual Arts</h5>
               </div>
               <div>
                 <p>
-                  Capturing landscapes, cityscapes and street life through my
-                  lens whenever I want.
+                  I find joy in capturing the beauty of everyday life through
+                  videos and photos, transforming them into unique artistic
+                  creations.
                 </p>
               </div>
             </div>
@@ -69,7 +68,9 @@ const Activities = () => {
                 <h5 className="fw-semibold mb-0 text-white">Sports</h5>
               </div>
               <div>
-                <p>I like playing soccer and going to the gym.</p>
+                <p>
+                  I like playing soccer, playing games and going to the gym.
+                </p>
               </div>
             </div>
           </Col>

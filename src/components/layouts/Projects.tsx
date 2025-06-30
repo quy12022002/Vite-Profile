@@ -5,7 +5,7 @@ import { GoLinkExternal } from "react-icons/go";
 
 const Projects = () => {
   return (
-    <div className="project-container">
+    <div className="project-container" id="project">
       <Container>
         <h2 className="project-title text-center">Personal Projects</h2>
         <p className="text-center pb-4">
@@ -13,7 +13,7 @@ const Projects = () => {
           solve interesting problems.
         </p>
         <Row>
-          <Col xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Col xs={12} sm={12} md={6} lg={4} xl={4}>
             <Card>
               <Card.Img
                 variant="top"

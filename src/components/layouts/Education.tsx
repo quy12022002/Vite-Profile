@@ -2,17 +2,17 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const Education = () => {
   return (
-    <div className="education-container">
+    <div className="education-container" id="education">
       <Container>
         <h2 className="education-title text-center">Education</h2>
         <p className="text-center">
           A comprehensive overview of my technical skills and areas of expertise
           in software development and design.
         </p>
-        <Row className="education-content g-4 justify-content-center">
+        <Row className="education-content g-4 justify-content-around">
           <Col xs={12} sm={10} md={6} lg={6} xl={5}>
             <div className="card p-5 h-100">
-              <div className=" align-items-center mb-3">
+              <div className="">
                 <h3 id="exp1-title">Diploma in Information Technology</h3>
                 <p className="school">
                   Thu Duc College of Technology (2021-2025)
@@ -28,12 +28,20 @@ const Education = () => {
               </div>
             </div>
           </Col>
-          <Col xs={12} sm={10} md={6} lg={6} xl={5}>
-            <div className="">
+          <Col
+            xs={12}
+            sm={10}
+            md={6}
+            lg={6}
+            xl={5}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <div>
               <img
                 src="src/assets/tdc.jpg"
                 alt="Logo"
-                className="img-fluid rounded"
+                loading="lazy"
+                className="h-auto w-100 shadow-lg rounded"
               />
             </div>
           </Col>
