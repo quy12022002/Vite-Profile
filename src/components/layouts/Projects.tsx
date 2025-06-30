@@ -2,6 +2,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import { FaTag } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { GoLinkExternal } from "react-icons/go";
+import imgProject from "../../assets/test.png";
 
 const Projects = () => {
   return (
@@ -17,8 +18,9 @@ const Projects = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="src/assets/test.png"
-                alt="img-card"
+                src={imgProject}
+                loading="lazy"
+                alt="image Project"
               />
               <Card.Body>
                 <Card.Title>My Dev Profile</Card.Title>
