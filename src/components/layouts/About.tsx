@@ -10,10 +10,10 @@ const About = () => {
               About Me
             </h2>
             <p>
-              I am a full-stack web Developer with experience in React (Next.js
-              Framework), SQL, Bootstrap, and SASS. I have participated in
-              building simple backend systems, creating APIs, and developing
-              frontend interfaces.
+              I am a full-stack web developer with experience in React, Node.js,
+              MySQL, Bootstrap, and SASS. I have participated in building simple
+              backend systems, creating APIs, and developing frontend
+              interfaces.
             </p>
             <p>
               I am passionate about solving problems and continuously improving
