@@ -98,12 +98,12 @@ const Header: React.FC = () => {
           <Nav.Link
             href="#contact"
             onClick={() => handleLinkClick("contact")}
-            className="d-block d-md-none"
+            className="d-block d-lg-none"
           >
             Contact
           </Nav.Link>
           <Button
-            className="btn-contact ms-auto mt-3 mt-md-0 d-none d-md-block"
+            className="btn-contact ms-auto mt-3 mt-md-0 d-none d-lg-block"
             type="button"
             onClick={() => handleLinkClick("contact")}
           >

@@ -1,20 +1,79 @@
-import React, { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import React, { useEffect, useState, type FormEvent } from "react";
+import { Button, Col, Container, Form, Row, Toast } from "react-bootstrap";
 import { FiSend } from "react-icons/fi";
 import imgEmail from "../../assets/email.jpg";
+import emailjs from "emailjs-com";
 
 const Contact: React.FC = () => {
-  const [email, setEmail] = useState("");
+  const [showToast, setShowToast] = useState<boolean>(false);
+  const [toastMessage, setToastMessage] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
   const [validated, setValidated] = useState<boolean>(false);
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    emailjs.init(EMAILJS_USER_ID);
+  }, []);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setValidated(true);
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    }
+    } else {
+      emailjs
+        .send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+          },
+          EMAILJS_USER_ID
+        )
 
-    setValidated(true);
+        .then(() => {
+          //response
+          setShowToast(true);
+          setToastMessage("Email sent successfully!");
+
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+          setValidated(false);
+        })
+        .catch(() => {
+          //err
+          setShowToast(true);
+          setToastMessage("Failed to send message. Please try again later.");
+        });
+    }
+  };
+
+  const handleFocusName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const handleFocusEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleFocusSubject = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSubject(e.target.value);
+  };
+
+  const handleFocusMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(e.target.value);
   };
 
   const validateEmail = (email: string) => {
@@ -46,8 +105,10 @@ const Contact: React.FC = () => {
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         type="text"
+                        value={name}
                         placeholder="Your name"
                         required
+                        onChange={handleFocusName}
                       />
                       <Form.Control.Feedback type="invalid">
                         Please enter your name.
@@ -62,7 +123,7 @@ const Contact: React.FC = () => {
                         value={email}
                         placeholder="name@example.com"
                         required
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={handleFocusEmail}
                         isInvalid={!validateEmail(email) && email.length > 0}
                       />
                       <Form.Control.Feedback type="invalid">
@@ -77,8 +138,10 @@ const Contact: React.FC = () => {
                       <Form.Label>Subject</Form.Label>
                       <Form.Control
                         type="text"
+                        value={subject}
                         placeholder="Your subject"
                         required
+                        onChange={handleFocusSubject}
                       />
                       <Form.Control.Feedback type="invalid">
                         Please enter subject
@@ -90,9 +153,11 @@ const Contact: React.FC = () => {
                       <Form.Label>Message</Form.Label>
                       <Form.Control
                         as="textarea"
+                        value={message}
                         rows={3}
                         placeholder="Your message"
                         required
+                        onChange={handleFocusMessage}
                       />
                       <Form.Control.Feedback type="invalid">
                         Please enter message
@@ -148,6 +213,22 @@ const Contact: React.FC = () => {
             </div>
           </Col>
         </Row>
+        <div className="position-fixed bottom-0 end-0 p-3">
+          <Toast
+            onClose={() => setShowToast(false)}
+            show={showToast}
+            delay={3000}
+            autohide
+          >
+            <Toast.Header className="justify-content-between">
+              <div>
+                <FiSend />
+                Message
+              </div>
+            </Toast.Header>
+            <Toast.Body className="text-black">{toastMessage}</Toast.Body>
+          </Toast>
+        </div>
       </Container>
     </div>
   );
