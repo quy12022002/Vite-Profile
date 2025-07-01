@@ -41,7 +41,6 @@ const Education = () => {
               <img
                 src={imgTDC}
                 alt="Image TDC"
-                loading="lazy"
                 className="h-auto w-100 shadow-lg rounded"
               />
             </div>

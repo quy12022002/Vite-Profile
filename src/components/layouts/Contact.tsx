@@ -177,7 +177,6 @@ const Contact: React.FC = () => {
                 <img
                   src={imgEmail}
                   alt="Contact Email"
-                  loading="lazy"
                   className="rounded-lg rounded img-fluid"
                   height="320"
                   width="480"

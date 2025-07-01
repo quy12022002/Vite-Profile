@@ -50,12 +50,7 @@ const Header: React.FC = () => {
     >
       <Container>
         <Navbar.Brand href="#">
-          <img
-            src={imgLogo}
-            alt="Logo quy"
-            className="navbar-logo"
-            loading="lazy"
-          />
+          <img src={imgLogo} alt="Logo quy" className="navbar-logo" />
           DEV DOXUANQUY
         </Navbar.Brand>
         <Navbar.Toggle

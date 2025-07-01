@@ -16,12 +16,7 @@ const Projects = () => {
         <Row>
           <Col xs={12} sm={12} md={6} lg={4} xl={4}>
             <Card>
-              <Card.Img
-                variant="top"
-                src={imgProject}
-                loading="lazy"
-                alt="image Project"
-              />
+              <Card.Img variant="top" src={imgProject} alt="image Project" />
               <Card.Body>
                 <Card.Title>My Dev Profile</Card.Title>
                 <Card.Text>
